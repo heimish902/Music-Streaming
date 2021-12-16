@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrap .top-btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.05), 0 5px 5px 0 rgba(0,0,0,0.05);
+  cursor: pointer;
+  z-index: 1;
+}
+/* header */
+header {
+  width: 100%;
+  height: 80px;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+}
+header .logo { 
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-image: url("../images/logo.png");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header .nav-bar { 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-bar .nav-menu {
+  height: 100%;
+  line-height: 80px;
+}
+header .nav-bar .nav-menu ul {
+  height: 100%;
+}
+header .nav-bar .nav-menu ul li {
+  float: left;
+  margin-right: 20px;
+}
+header .nav-bar .nav-menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 14px;  
+}
+header .nav-bar .search-bar {
+  width: 30%;
+  height: 40px;
+  position: relative;
+}
+header .nav-bar .search-bar img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  position: absolute;
+  top: 7.5px;
+  left: 10px;
+}
+header .nav-bar .search-bar input {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  border: 1px solid #2391E9;
+  border-radius: 50px;
+}
+
+
+/* container */ 
+.container {
+  width: 100%;
+  height: 1500px;
+  padding-top: 60px;
+  background-color: rgba(219, 219, 219, 0.2);
+}
+.container .inner {
+  width: 1600px;
+  height: 1000px;
+  margin: auto;
+}
+
+/* aside */
+.container .inner aside {
+  width: 15%;
+  height: auto;
+  float: left;
+  padding: 30px 0px 30px 20px;
+  margin-right: 2%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.container .inner aside h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.container .inner aside ol {
+  width: 100%;
+  height: auto;
+  counter-reset: counter;
+}
+.container .inner aside ol li::before {
+  content: counter(counter, decimal-leading-zero);
+  counter-increment: counter;
+  padding: 2px 4px;
+  margin-right: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #DBDBDB;
+  border-radius: 5px;
+}
+.container .inner aside ol .top::before {
+  background-color: #2391E9;
+}
+.container .inner aside ol li {
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* section */
+.right {
+  width: 83%;
+  float: right;
+}
+section {
+  width: 49%;
+  height: 250px;
+  margin: 0px 2% 50px 0px;
+  float: left;
+  overflow: hidden;
+  border-radius: 10px;
+  opacity: 0;
+}
+section:nth-of-type(even) {
+  margin-right: 0;
+}
+section .imgbox {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+section .imgbox p {
+  width: 80px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+
+}
+section .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .txt {
+  width: 50%;
+  height: 100%;
+  padding: 30px 10px 20px 15px;
+  float: right;
+  background-color: #fff;
+}
+section .txt .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+section .txt .title img {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+section .txt h2 {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+section .txt h2 a:hover {
+  font-weight: 400;
+  color: #2391E9;
+}
+section .txt .tag li {
+  display: inline-block;
+  margin: 0px 8px 10px 0px;
+}
+section .txt .tag li a {
+  font-size: 14px;
+  color: #939393;
+}
+section .state {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top:1px solid #939393;
+}
+section .state img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+section .state span {
+  margin-right: 30px;
+}
